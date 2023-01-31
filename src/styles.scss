@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+sidebar {
+
+  p-sidebar#sidebar-1 {
+
+    .p-sidebar-header,
+    .p-sidebar-content {
+      border-bottom: 2px solid rgba(45, 56, 57, 0.34) !important;
+    }
+
+    .p-sidebar-content {
+      height: 100vw !important;
+    }
+  }
+}
