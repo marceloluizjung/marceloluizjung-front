@@ -5,6 +5,7 @@ import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DropdownModule } from 'primeng/dropdown';
+import {InputSwitchModule} from 'primeng/inputswitch';
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import { DropdownModule } from 'primeng/dropdown';
     SidebarModule,
     ButtonModule,
     DropdownModule,
+    InputSwitchModule
   ],
   exports: [
     CommonModule,
@@ -21,6 +23,7 @@ import { DropdownModule } from 'primeng/dropdown';
     ButtonModule,
     SidebarComponent,
     DropdownModule,
+    InputSwitchModule
   ],
   declarations: [SidebarComponent],
 })

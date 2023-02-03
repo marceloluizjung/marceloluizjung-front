@@ -2,6 +2,9 @@
   "marceloluizjungfront": {
     "home": "Página inicial",
     "aboutus": "Sobre nós",
-    "tools": "Ferramentas"
+    "tools": "Ferramentas",
+    "sidebarmessage": "Reveste-se de força e dignidade; sorri diante do futuro. Provérbios 31:25",
+    "start": "Começar",
+    "freetools": "Ferramentas gratuitas para auxiliar o desenvolvimento backend e frontend de aplicações web."
   }
 }

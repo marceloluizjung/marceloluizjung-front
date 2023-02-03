@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { ACCEPT_LANGUAGES } from 'src/app/app.module';
 
 @Component({
   selector: 'sidebar',
@@ -6,38 +9,71 @@ import { Component } from '@angular/core';
   templateUrl: './sidebar.component.html',
 })
 export class SidebarComponent {
-  public visibleSidebar: boolean;
+  constructor(private translate: TranslateService, private router: Router) {}
+  public visibleSidebar: boolean = false;
 
   public sidebarItems: { name: string; icon: string }[] = [
     {
-      name: 'Home',
+      name: this.translate.instant('marceloluizjungfront.home'),
       icon: 'pi pi-home',
     },
     {
-      name: 'About Us',
+      name: this.translate.instant('marceloluizjungfront.aboutus'),
       icon: 'pi pi-ellipsis-h',
     },
     {
-      name: 'Tools',
-      icon: 'pi pi-cog',
+      name: this.translate.instant('marceloluizjungfront.tools'),
+      icon: 'pi pi-wrench',
     },
   ];
 
   public sidebarLanguages: { language: string; flag: string }[] = [
     {
-      language: 'Portugês',
+      language: ACCEPT_LANGUAGES[0],
       flag: 'assets/images/flags/brasil.png',
     },
     {
-      language: 'Inglês',
+      language: ACCEPT_LANGUAGES[1],
       flag: 'assets/images/flags/estados-unidos.png',
     },
     {
-      language: 'Espanhol',
+      language: ACCEPT_LANGUAGES[2],
       flag: 'assets/images/flags/spain.png',
     },
   ];
 
-  public sidebarMessage: string =
-    'Reveste-se de força e dignidade; sorri diante do futuro. Provérbios 31:25';
+  public sidebarMessage: string = this.translate.instant(
+    'marceloluizjungfront.sidebarmessage'
+  );
+
+  public storageLanguage: String | null =
+    localStorage.getItem('language') || ACCEPT_LANGUAGES[0];
+
+  public isBlackTheme: boolean = JSON.parse(
+    localStorage.getItem('isBlackTheme') || 'false'
+  );
+
+  @Output()
+  private themeEvent = new EventEmitter<boolean>();
+
+  /**
+   * Troca de linguagem.
+   *
+   * @param sidebarLanguage - Linguagem selecionada.
+   */
+  public changeLanguage(sidebarLanguage: string) {
+    localStorage.setItem('language', sidebarLanguage);
+    location.reload();
+  }
+
+  /**
+   * Seleciona o dark mode da aplicação.
+   *
+   * @param isBlackTheme - Indicação do dark mode selecionado.
+   */
+  public changeTheme(isBlackTheme: boolean) {
+    localStorage.setItem('isBlackTheme', String(isBlackTheme));
+    this.isBlackTheme = isBlackTheme;
+    this.themeEvent.emit(isBlackTheme);
+  }
 }

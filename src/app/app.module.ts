@@ -51,12 +51,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 
 export function AppInitializerFactory(translate: TranslateService) {
   return () => {
-    let navigatorLanguage = navigator.language;
-    let localeLanguage = ACCEPT_LANGUAGES.find((language) => {
-      return navigatorLanguage.includes(language);
-    });
-    if (!localeLanguage) localeLanguage = 'en';
-    translate.setDefaultLang(localeLanguage);
-    return translate.use(localeLanguage);
+    let navigatorLanguage = localStorage.getItem('language') || ACCEPT_LANGUAGES[0];
+    translate.setDefaultLang(navigatorLanguage);
+    return translate.use(navigatorLanguage);
   };
 }
