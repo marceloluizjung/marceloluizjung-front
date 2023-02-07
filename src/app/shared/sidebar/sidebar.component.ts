@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ACCEPT_LANGUAGES } from 'src/app/app.module';
@@ -12,18 +12,35 @@ export class SidebarComponent {
   constructor(private translate: TranslateService, private router: Router) {}
   public visibleSidebar: boolean = false;
 
-  public sidebarItems: { name: string; icon: string }[] = [
+  public sidebarItems: {
+    name: string;
+    icon: string;
+    route?: string;
+    showChildren?: boolean;
+    children?: any[];
+  }[] = [
     {
       name: this.translate.instant('marceloluizjungfront.home'),
       icon: 'pi pi-home',
+      route: '/home',
     },
     {
       name: this.translate.instant('marceloluizjungfront.aboutus'),
       icon: 'pi pi-ellipsis-h',
+      route: '#',
     },
     {
       name: this.translate.instant('marceloluizjungfront.tools'),
       icon: 'pi pi-wrench',
+      showChildren: false,
+      children: [
+        {
+          name: this.translate.instant(
+            'marceloluizjungfront.unicodetextconverter'
+          ),
+          route: '/unicode-text-converter',
+        },
+      ],
     },
   ];
 
@@ -56,6 +73,9 @@ export class SidebarComponent {
   @Output()
   private themeEvent = new EventEmitter<boolean>();
 
+  @Input()
+  public activeLink: string = String();
+
   /**
    * Troca de linguagem.
    *
@@ -75,5 +95,14 @@ export class SidebarComponent {
     localStorage.setItem('isBlackTheme', String(isBlackTheme));
     this.isBlackTheme = isBlackTheme;
     this.themeEvent.emit(isBlackTheme);
+  }
+
+  public sidebarNavigate(route?: string) {
+    if (route) this.router.navigateByUrl(route);
+    this.closeSidebar();
+  }
+
+  public closeSidebar() {
+    this.visibleSidebar = false;
   }
 }

@@ -3,9 +3,14 @@
 
     <div class="left-content-container">
       <div class="left-content">
-        <span class="left-message">
-          {{this.translate.instant('marceloluizjungfront.freetools')}}
-        </span>
+        <div class="left-content-message-description">
+          <span class="left-message">
+            {{this.translate.instant('marceloluizjungfront.homemessage')}}
+          </span>
+          <span class="left-description">
+            {{this.translate.instant('marceloluizjungfront.homedescription')}}
+          </span>
+        </div>
       </div>
       <div class="left-content">
         <button pButton pRipple type="button" [label]="this.translate.instant('marceloluizjungfront.start')"
@@ -15,6 +20,6 @@
 
   </div>
   <div class="content-container">
-    <img src="assets/images/web-development/web-development.png" width="95%" />
+    <img src="assets/images/web-development/web-development.png" width="95%" height="95%" />
   </div>
 </div>

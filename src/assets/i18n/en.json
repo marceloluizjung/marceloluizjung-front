@@ -5,6 +5,8 @@
     "tools": "Tools",
     "sidebarmessage": "It is clothed with strength and dignity; smiles at the future. Proverbs 31:25",
     "start": "Start",
-    "freetools": "Free tools to help backend and frontend development of web applications."
+    "homemessage": "Free tools",
+    "homedescription": "Resources to aid web application development",
+    "unicodetextconverter": "Unicode Converter"
   }
 }

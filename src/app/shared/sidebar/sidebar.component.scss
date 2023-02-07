@@ -1,10 +1,7 @@
-.visible-sidebar-controller {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  margin: 10px;
-  background: #0400ff4a;
-
+.sidebar-header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  color: #2d3839;
 }
 
 .sidebar-links {
@@ -13,10 +10,29 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 22px;
   line-height: 4;
+
+  .active {
+    color: #2563eb !important;
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+
+  .sidebar-sub-links {
+    font-size: 11px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+  }
 }
 
-.sidebar-header {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 22px;
-  color: #2d3839;
+.visible-sidebar-controller {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  margin: 10px;
+  background: #0400ff4a;
+  z-index: 9000;
 }

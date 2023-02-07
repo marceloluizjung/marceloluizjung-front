@@ -5,6 +5,8 @@
     "tools": "Herramientas",
     "sidebarmessage": "Está revestido de fuerza y ​​dignidad; sonríe al futuro. Proverbios 31:25",
     "start": "Comenzar",
-    "freetools": "Herramientas gratuitas para ayudar al desarrollo backend y frontend de aplicaciones web."
+    "homemessage": "Herramientas gratuitas",
+    "homedescription": "Recursos para ayudar al desarrollo de aplicaciones web",
+    "unicodetextconverter": "Convertidor Unicode"
   }
 }

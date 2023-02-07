@@ -5,11 +5,29 @@
     </div>
   </ng-template>
   <ng-template pTemplate="content">
-    <div *ngFor="let sidebarItem of sidebarItems">
-      <a href="#" class="sidebar-links">
+    <div *ngFor="let sidebarItem of sidebarItems" class="sidebar-links">
+      <div *ngIf="sidebarItem.children">
+        <div>
+          <span (click)="sidebarItem.showChildren ? sidebarItem.showChildren = false : sidebarItem.showChildren = true">
+            <i [class]="sidebarItem.icon"></i>
+            {{sidebarItem.name}}
+            <i *ngIf="!sidebarItem.showChildren" class="pi pi-angle-right"></i>
+            <i *ngIf="sidebarItem.showChildren" class="pi pi-angle-down"></i>
+          </span>
+        </div>
+        <div *ngIf="sidebarItem.showChildren">
+          <span *ngFor="let children of sidebarItem.children" class="sidebar-sub-links"
+            (click)="sidebarNavigate(children.route)" [ngClass]="{active: activeLink == children.route}">
+            <i class="pi pi-angle-right"></i>
+            {{children.name}}
+          </span>
+        </div>
+      </div>
+      <span *ngIf="!sidebarItem.children" (click)="sidebarNavigate(sidebarItem.route)"
+        [ngClass]="{active: activeLink == sidebarItem.route}">
         <i [class]="sidebarItem.icon"></i>
         {{sidebarItem.name}}
-      </a>
+      </span>
     </div>
   </ng-template>
   <ng-template pTemplate="footer">
@@ -32,5 +50,5 @@
     </div>
   </ng-template>
 </p-sidebar>
-<button pButton pRipple type="button" icon="pi pi-bars"
+<button pButton pRipple type="button" icon="pi pi-bars" *ngIf="activeLink != '/home'"
   class="p-button-rounded p-button-outlined visible-sidebar-controller" (click)="visibleSidebar = true"></button>

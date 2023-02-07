@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AccordionModule } from 'primeng/accordion';
+import { AutoCompleteModule } from 'primeng/autocomplete';
 import { ButtonModule } from 'primeng/button';
+import { DropdownModule } from 'primeng/dropdown';
+import { InputSwitchModule } from 'primeng/inputswitch';
 import { SidebarModule } from 'primeng/sidebar';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { DropdownModule } from 'primeng/dropdown';
-import {InputSwitchModule} from 'primeng/inputswitch';
 
 @NgModule({
   imports: [
@@ -14,7 +16,9 @@ import {InputSwitchModule} from 'primeng/inputswitch';
     SidebarModule,
     ButtonModule,
     DropdownModule,
-    InputSwitchModule
+    InputSwitchModule,
+    AutoCompleteModule,
+    ReactiveFormsModule
   ],
   exports: [
     CommonModule,
@@ -23,7 +27,9 @@ import {InputSwitchModule} from 'primeng/inputswitch';
     ButtonModule,
     SidebarComponent,
     DropdownModule,
-    InputSwitchModule
+    InputSwitchModule,
+    AutoCompleteModule,
+    ReactiveFormsModule
   ],
   declarations: [SidebarComponent],
 })

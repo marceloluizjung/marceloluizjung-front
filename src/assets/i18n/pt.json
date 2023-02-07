@@ -5,6 +5,8 @@
     "tools": "Ferramentas",
     "sidebarmessage": "Reveste-se de força e dignidade; sorri diante do futuro. Provérbios 31:25",
     "start": "Começar",
-    "freetools": "Ferramentas gratuitas para auxiliar o desenvolvimento backend e frontend de aplicações web."
+    "homemessage": "Ferramentas gratuitas",
+    "homedescription": "Recursos para auxiliar o desenvolvimento de aplicações web",
+    "unicodetextconverter": "Conversor Unicode"
   }
 }

@@ -1,8 +1,8 @@
 .black-theme {
   background: #303030 !important;
 
-  .left-message {
-    color: #8f8f8f;
+  .left-content {
+    color: #8f8f8f !important;
   }
 
   :root {
@@ -2164,14 +2164,14 @@
   }
 
   .p-button.p-button-outlined {
-    background: #0400ff4a;
-    color: #3B82F6;
+    background: rgb(255 255 255 / 2%) !important;
+    color: #8f8f8f !important;
     border: 1px solid;
   }
 
   .p-button.p-button-outlined:enabled:hover {
-    background: rgba(59, 130, 246, 0.04);
-    color: #3B82F6;
+    background: rgb(255 255 255 / 55%) !important;
+    color: #000000 !important;
     border: 1px solid;
   }
 
