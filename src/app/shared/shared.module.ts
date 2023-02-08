@@ -11,6 +11,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import {AvatarModule} from 'primeng/avatar';
 import {AvatarGroupModule} from 'primeng/avatargroup';
 import { TranslateModule } from '@ngx-translate/core';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { TranslateModule } from '@ngx-translate/core';
     ReactiveFormsModule,
     AvatarModule,
     AvatarGroupModule,
-    TranslateModule
+    TranslateModule,
+    InputTextareaModule
   ],
   exports: [
     CommonModule,
@@ -39,7 +41,8 @@ import { TranslateModule } from '@ngx-translate/core';
     ReactiveFormsModule,
     AvatarModule,
     AvatarGroupModule,
-    TranslateModule
+    TranslateModule,
+    InputTextareaModule
   ],
   declarations: [SidebarComponent],
 })

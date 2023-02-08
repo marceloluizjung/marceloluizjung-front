@@ -1,3 +1,29 @@
+.unicode-text-converter-form-container {
+  @media screen and (max-width: 473px) {
+
+    justify-content: center !important;
+
+    p-autocomplete {
+      width: 100% !important;
+
+      .p-component {
+        width: 100% !important;
+
+      }
+    }
+
+    >* {
+      margin-right: 0px !important;
+    }
+  }
+
+  .unicode-text-converter-output-container {
+    padding-top: 0px !important;
+  }
+
+
+}
+
 sidebar {
 
   p-sidebar#sidebar-1 {

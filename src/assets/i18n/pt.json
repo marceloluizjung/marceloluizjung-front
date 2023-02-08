@@ -12,6 +12,9 @@
     "computerscientist": "Cientista da Computação",
     "fullstackdeveloper": "Desenvolvedor Full Stack",
     "developername": "Marcelo Luiz Jung",
-    "developercity": "Blumenau-SC"
+    "developercity": "Blumenau-SC",
+    "input": "Entrada",
+    "output": "Saída",
+    "convert": "Converter"
   }
 }

@@ -12,6 +12,9 @@
     "computerscientist": "Científico de la computación",
     "fullstackdeveloper": "Desarrollador de pila completa",
     "developername": "Marcelo Luiz Jung",
-    "developercity": "Blumenau-SC"
+    "developercity": "Blumenau-SC",
+    "input": "Entrada",
+    "output": "Salida",
+    "convert": "Convertir"
   }
 }
