@@ -27,7 +27,7 @@ export class SidebarComponent {
     {
       name: this.translate.instant('marceloluizjungfront.aboutus'),
       icon: 'pi pi-ellipsis-h',
-      route: '#',
+      route: '/aboutus',
     },
     {
       name: this.translate.instant('marceloluizjungfront.tools'),

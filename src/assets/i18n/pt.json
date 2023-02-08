@@ -1,12 +1,17 @@
 {
   "marceloluizjungfront": {
     "home": "Página inicial",
-    "aboutus": "Sobre nós",
+    "aboutus": "Sobre mim",
     "tools": "Ferramentas",
     "sidebarmessage": "Reveste-se de força e dignidade; sorri diante do futuro. Provérbios 31:25",
     "start": "Começar",
     "homemessage": "Ferramentas gratuitas",
     "homedescription": "Recursos para auxiliar o desenvolvimento de aplicações web",
-    "unicodetextconverter": "Conversor Unicode"
+    "unicodetextconverter": "Conversor Unicode",
+    "aboutusdescription": "Olá, meu nome é Marcelo Luiz Jung, sou Cientista da Computação e Desenvolvedor Full Stack, entusiasta por tecnologia com conhecimentos em cloud, linguagens de programação e frameworks que auxiliam a escalabilidade e desenvovimento das aplicações web.",
+    "computerscientist": "Cientista da Computação",
+    "fullstackdeveloper": "Desenvolvedor Full Stack",
+    "developername": "Marcelo Luiz Jung",
+    "developercity": "Blumenau-SC"
   }
 }

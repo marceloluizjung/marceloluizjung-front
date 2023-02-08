@@ -1,12 +1,17 @@
 {
   "marceloluizjungfront": {
     "home": "Home",
-    "aboutus": "About Us",
+    "aboutus": "About me",
     "tools": "Tools",
     "sidebarmessage": "It is clothed with strength and dignity; smiles at the future. Proverbs 31:25",
     "start": "Start",
     "homemessage": "Free tools",
     "homedescription": "Resources to aid web application development",
-    "unicodetextconverter": "Unicode Converter"
+    "unicodetextconverter": "Unicode Converter",
+    "aboutusdescription": "Hello, my name is Marcelo Luiz Jung, I'm a Computer Scientist and Full Stack Developer, technology enthusiast with knowledge in cloud, programming languages ​​and frameworks that help the scalability and development of web applications.",
+    "computerscientist": "Computer scientist",
+    "fullstackdeveloper": "Full Stack Developer",
+    "developername": "Marcelo Luiz Jung",
+    "developercity": "Blumenau-SC"
   }
 }

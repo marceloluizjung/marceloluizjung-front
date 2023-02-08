@@ -8,6 +8,10 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { SidebarModule } from 'primeng/sidebar';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import {AvatarModule} from 'primeng/avatar';
+import {AvatarGroupModule} from 'primeng/avatargroup';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 @NgModule({
   imports: [
@@ -18,7 +22,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     DropdownModule,
     InputSwitchModule,
     AutoCompleteModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AvatarModule,
+    AvatarGroupModule,
+    TranslateModule
   ],
   exports: [
     CommonModule,
@@ -29,7 +36,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     DropdownModule,
     InputSwitchModule,
     AutoCompleteModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AvatarModule,
+    AvatarGroupModule,
+    TranslateModule
   ],
   declarations: [SidebarComponent],
 })
