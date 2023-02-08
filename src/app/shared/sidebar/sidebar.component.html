@@ -52,3 +52,6 @@
 </p-sidebar>
 <button pButton pRipple type="button" icon="pi pi-bars" *ngIf="activeLink != '/home'"
   class="p-button-rounded p-button-outlined visible-sidebar-controller" (click)="visibleSidebar = true"></button>
+
+<button pButton pRipple type="button" icon="pi pi-whatsapp" *ngIf="activeLink != '/home'" (click)="openOnWhatsApp()"
+  class="p-button-rounded p-button-outlined visible-sidebar-whatsapp"></button>

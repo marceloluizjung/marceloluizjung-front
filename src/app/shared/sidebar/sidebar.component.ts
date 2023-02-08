@@ -105,4 +105,8 @@ export class SidebarComponent {
   public closeSidebar() {
     this.visibleSidebar = false;
   }
+
+  public openOnWhatsApp() {
+    window.open('https://wa.me/+5547999042339', '_blank');
+  }
 }
