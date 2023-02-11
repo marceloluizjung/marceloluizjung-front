@@ -21,8 +21,7 @@ export class AppComponent implements OnInit {
   }
 
   public isBlackTheme: boolean = JSON.parse(
-    localStorage.getItem('isBlackTheme') || 'false'
-  );
+    localStorage.getItem('isBlackTheme') || String(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) || 'false');
 
   public changeTheme() {
     this.isBlackTheme = JSON.parse(

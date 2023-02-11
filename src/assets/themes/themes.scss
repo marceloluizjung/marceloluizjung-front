@@ -1,7 +1,7 @@
 .black-theme {
   background: #303030 !important;
 
-  .left-content, .unicode-text-converter-container {
+  .left-content-container, .unicode-text-converter-container {
     color: #8f8f8f !important;
   }
 
@@ -5485,6 +5485,7 @@
     color: #495057;
     border: 0 none;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    background: #e0e4ce !important;
   }
 
   .p-sidebar .p-sidebar-header {

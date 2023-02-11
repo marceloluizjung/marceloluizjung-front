@@ -67,7 +67,12 @@ export class SidebarComponent {
     localStorage.getItem('language') || ACCEPT_LANGUAGES[0];
 
   public isBlackTheme: boolean = JSON.parse(
-    localStorage.getItem('isBlackTheme') || 'false'
+    localStorage.getItem('isBlackTheme') ||
+      String(
+        window.matchMedia &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches
+      ) ||
+      'false'
   );
 
   @Output()
