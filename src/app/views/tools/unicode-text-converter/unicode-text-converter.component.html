@@ -1,0 +1,19 @@
+<div class="unicode-text-converter-container">
+  <div class="unicode-text-converter-header-container">
+    <span>{{ 'marceloluizjungfront.unicodetextconverter' | translate }}</span>
+  </div>
+  <div class="unicode-text-converter-input-container">
+    <span>{{ 'marceloluizjungfront.input' | translate }}</span>
+    <textarea #inputText pInputTextarea [autoResize]="true"></textarea>
+  </div>
+  <form [formGroup]="textConverterFormGroup" (ngSubmit)="convertText()" class="unicode-text-converter-form-container">
+    <p-autoComplete name="regex" formControlName="regex" [suggestions]="autoCompleteSuggestions"
+      (completeMethod)="autoCompleteSearch()"></p-autoComplete>
+    <button pButton pRipple type="button" label="{{ 'marceloluizjungfront.convert' | translate }}" type="submit"
+      class="p-button-rounded"></button>
+  </form>
+  <div class="unicode-text-converter-output-container">
+    <span>{{ 'marceloluizjungfront.output' | translate }}</span>
+    <textarea #outText pInputTextarea [autoResize]="true"></textarea>
+  </div>
+</div>

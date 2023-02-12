@@ -40,6 +40,12 @@ export class SidebarComponent {
           ),
           route: '/unicode-text-converter',
         },
+        {
+          name: this.translate.instant(
+            'marceloluizjungfront.jsonpath'
+          ),
+          route: '/jsonpath',
+        },
       ],
     },
   ];

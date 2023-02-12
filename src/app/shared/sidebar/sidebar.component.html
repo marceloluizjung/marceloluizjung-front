@@ -7,8 +7,10 @@
   <ng-template pTemplate="content">
     <div *ngFor="let sidebarItem of sidebarItems" class="sidebar-links">
       <div *ngIf="sidebarItem.children">
-        <div>
-          <span (click)="sidebarItem.showChildren ? sidebarItem.showChildren = false : sidebarItem.showChildren = true">
+        <div class="hover-link"
+          (click)="sidebarItem.showChildren ? sidebarItem.showChildren = false : sidebarItem.showChildren = true"
+          [ngClass]="{ 'hover-link-color': sidebarItem.showChildren} ">
+          <span>
             <i [class]="sidebarItem.icon"></i>
             {{sidebarItem.name}}
             <i *ngIf="!sidebarItem.showChildren" class="pi pi-angle-right"></i>
@@ -16,18 +18,22 @@
           </span>
         </div>
         <div *ngIf="sidebarItem.showChildren">
-          <span *ngFor="let children of sidebarItem.children" class="sidebar-sub-links"
-            (click)="sidebarNavigate(children.route)" [ngClass]="{active: activeLink == children.route}">
-            <i class="pi pi-angle-right"></i>
-            {{children.name}}
-          </span>
+          <div *ngFor="let children of sidebarItem.children" class="sidebar-sub-links hover-link"
+            (click)="sidebarNavigate(children.route)">
+            <span [ngClass]="{active: activeLink == children.route}">
+              <i class="pi pi-angle-right"></i>
+              {{children.name}}
+            </span>
+          </div>
         </div>
       </div>
-      <span *ngIf="!sidebarItem.children" (click)="sidebarNavigate(sidebarItem.route)"
-        [ngClass]="{active: activeLink == sidebarItem.route}">
-        <i [class]="sidebarItem.icon"></i>
-        {{sidebarItem.name}}
-      </span>
+      <div *ngIf="!sidebarItem.children" (click)="sidebarNavigate(sidebarItem.route)"
+        [ngClass]="{active: activeLink == sidebarItem.route}" class="hover-link">
+        <span>
+          <i [class]="sidebarItem.icon"></i>
+          {{sidebarItem.name}}
+        </span>
+      </div>
     </div>
   </ng-template>
   <ng-template pTemplate="footer">

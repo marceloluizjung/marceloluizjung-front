@@ -1,0 +1,30 @@
+<div class="jsonpath-container">
+  <div class="header-container">
+    <span>JSONPath</span>
+  </div>
+  <div class="body-container">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      <div class="path-container">
+        <div class="input">
+          <input type="text" pInputText name="path" formControlName="path"
+            [class.ng-dirty]="this.formGroup.controls['path'].touched && !this.formGroup.controls['path'].valid">
+        </div>
+        <div class="button">
+          <button pButton pRipple type="submit" label="{{'marceloluizjungfront.process' | translate}}"
+            class="p-button-rounded" style="margin-right: 5px;"></button>
+          <button pButton pRipple type="button" icon="pi pi-ellipsis-h" class="p-button-rounded"></button>
+        </div>
+      </div>
+      <div class="json-container">
+        <div class="input">
+          <textarea pInputTextarea [autoResize]="true" name="input" formControlName="input"
+            [class.ng-dirty]="this.formGroup.controls['input'].touched && !this.formGroup.controls['input'].valid"></textarea>
+        </div>
+        <div class="output">
+          <textarea pInputTextarea [autoResize]="true" name="output" formControlName="output"
+            [class.ng-dirty]="this.formGroup.controls['output'].touched && !this.formGroup.controls['output'].valid"></textarea>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
