@@ -11,6 +11,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { MenuModule } from 'primeng/menu';
 import { SidebarModule } from 'primeng/sidebar';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
@@ -29,6 +30,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     TranslateModule,
     InputTextareaModule,
     InputTextModule,
+    MenuModule,
   ],
   exports: [
     CommonModule,
@@ -45,6 +47,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     TranslateModule,
     InputTextareaModule,
     InputTextModule,
+    MenuModule,
   ],
   declarations: [SidebarComponent],
 })

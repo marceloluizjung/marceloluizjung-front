@@ -12,9 +12,16 @@
         <div class="button">
           <button pButton pRipple type="submit" label="{{'marceloluizjungfront.process' | translate}}"
             class="p-button-rounded" style="margin-right: 5px;"></button>
-          <button pButton pRipple type="button" icon="pi pi-ellipsis-h" class="p-button-rounded"></button>
+          <button pButton pRipple type="button" icon="pi pi-ellipsis-h" class="p-button-rounded"
+            (click)="jsonpathoptions.toggle($event)"></button>
+          <p-menu #jsonpathoptions [popup]="true" [model]="jsonPathOptionsItems"></p-menu>
         </div>
       </div>
+
+      <div class="expressions-container" *ngIf="visibleExpressions">
+        <span>Expressions</span>
+      </div>
+
       <div class="json-container">
         <div class="input">
           <textarea pInputTextarea [autoResize]="true" name="input" formControlName="input"

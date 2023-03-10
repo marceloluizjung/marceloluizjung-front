@@ -15,6 +15,10 @@
     "developercity": "Blumenau-SC",
     "input": "Entrada",
     "output": "Saída",
-    "convert": "Converter"
+    "convert": "Converter",
+    "jsonpath": "JSONPath",
+    "process": "Processar",
+    "ident": "Identar",
+    "jsonpathexpressions": "Expressões"
   }
 }
