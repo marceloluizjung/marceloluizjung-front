@@ -22,6 +22,18 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Deploy
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+https://senoritadeveloper.medium.com/deploy-an-angular-application-to-github-pages-65573194595a
+
+ng build --prod --base-href "https://marceloluizjung.github.io/marceloluizjung-front/"
+
+
+"github-build": "ng build --configuration production --base-href 'https://marceloluizjung.github.io/marceloluizjung-front/'"
+
+Token: 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
+
+git remote set-url origin https://marceloluizjung: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@github.com/marceloluizjung/marceloluizjung-front.git
+
+
+npx angular-cli-ghpages --dir=dist/marceloluizjung-front --no-silent
