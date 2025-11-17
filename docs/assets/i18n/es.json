@@ -1,0 +1,20 @@
+{
+  "marceloluizjungfront": {
+    "home": "Inicio",
+    "aboutus": "Sobre mi",
+    "tools": "Herramientas",
+    "sidebarmessage": "Está revestido de fuerza y ​​dignidad; sonríe al futuro. Proverbios 31:25",
+    "start": "Comenzar",
+    "homemessage": "Herramientas gratuitas",
+    "homedescription": "Recursos para ayudar al desarrollo de aplicaciones web",
+    "unicodetextconverter": "Convertidor Unicode",
+    "aboutusdescription": "Hola, mi nombre es Marcelo Luiz Jung, soy Informático y Desarrollador Full Stack, entusiasta de la tecnología con conocimientos en nube, lenguajes de programación y frameworks que ayudan a la escalabilidad y desarrollo de aplicaciones web.",
+    "computerscientist": "Científico de la computación",
+    "fullstackdeveloper": "Desarrollador de pila completa",
+    "developername": "Marcelo Luiz Jung",
+    "developercity": "Blumenau-SC",
+    "input": "Entrada",
+    "output": "Salida",
+    "convert": "Convertir"
+  }
+}
