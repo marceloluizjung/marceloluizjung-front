@@ -10,7 +10,8 @@ const ROUTES: Routes = [
   { path: 'unicode-text-converter', component: UnicodeTextConverterComponent },
   { path: 'aboutus', component: AboutusComponent },
   { path: 'jsonpath', component: JSONPathComponent },
-  { path: '**', redirectTo: 'home' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
